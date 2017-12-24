@@ -111,10 +111,22 @@
 
 <body class="htmlNoPages">
 <script>
-  		 var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-console.log(this.responseText);
+  
+     $.ajax({
+            type: "POST",
+            url: "https://ctcboard-peachmaster.c9users.io",
+            timeout: 2000,
+            data: { image: "/static/images/apples.jpeg", text: "apples" },
+            success: function(data) {
+                //show content
+                alert('Success!')
+            },
+            error: function(jqXHR, textStatus, err) {
+                //show error message
+                alert('text status '+textStatus+', err '+err)
+            }
+        });
+
                    
   </script>
   <span class="gwd-span-2uq8" id="text">CTC Test</span>
