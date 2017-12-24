@@ -111,19 +111,10 @@
 
 <body class="htmlNoPages">
 <script>
-  			var data = {};
-					data.title = "title";
-					data.message = "message";
-					
-					$.ajax({
-						type: 'POST',
-						data: JSON.stringify(data),
-				        contentType: 'application/json',
-                        url: 'http://localhost:3000/endpoint',						
-                        success: function(data) {
-                            console.log('success');
-                            console.log(JSON.stringify(data));
-                        }
+  		 var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+console.log(this.responseText);
                     });
   </script>
   <span class="gwd-span-2uq8" id="text">CTC Test</span>
