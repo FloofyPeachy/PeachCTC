@@ -112,20 +112,22 @@
 </head>
 
 <body class="htmlNoPages">
+  <script src="/cors.js"></script>
 <script>
   $(document).ready(function () {
   //your code here
+var xhr = createCORSRequest('POST', "https://PeachCTC-mensahkenny76952926.codeanyapp.com");
+xhr.send();
 
 
-
-      xmlhttp = new XMLHttpRequest();
-   xmlhttp.open("POST","https://PeachCTC-mensahkenny76952926.codeanyapp.com", true);
-   xmlhttp.onreadystatechange=function(){
-         if (xmlhttp.readyState==4 && xmlhttp.status==200){
-           string=xmlhttp.responseText;
-         }
-   }
-   xmlhttp.send();
+     // xmlhttp = new XMLHttpRequest();
+  // xmlhttp.open("POST","https://PeachCTC-mensahkenny76952926.codeanyapp.com", true);
+  // xmlhttp.onreadystatechange=function(){
+  //       if (xmlhttp.readyState==4 && xmlhttp.status==200){
+    //       string=xmlhttp.responseText;
+   //      }
+  // }
+   //xmlhttp.send();
     
 
      
