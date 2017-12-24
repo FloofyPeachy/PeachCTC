@@ -117,6 +117,7 @@
   //your code here
 
 
+<<<<<<< HEAD
       xmlhttp = new XMLHttpRequest();
    xmlhttp.open("GET","http://localhost:8001/boardupdate", true);
    xmlhttp.onreadystatechange=function(){
@@ -126,6 +127,23 @@
    }
    xmlhttp.send();
     
+=======
+     $.ajax({
+            type: "POST",
+            url: "/boardupdate",
+            timeout: 2000,
+            data: { image: "/static/images/apples.jpeg", text: "apples" },
+            success: function(data) {
+                //show content
+                alert('Success!')
+            },
+            error: function(jqXHR, textStatus, err) {
+                //show error message
+                alert('text status '+textStatus+', err '+err)
+            }
+        });
+
+>>>>>>> e3fb844cfddff7d1298a26a71dac446ae113c7ff
             });       
   </script>
   <span class="gwd-span-2uq8" id="text">CTC Test</span>
