@@ -119,7 +119,7 @@
 
 
       xmlhttp = new XMLHttpRequest();
-   xmlhttp.open("GET","http://localhost:8001/boardupdate", true);
+   xmlhttp.open("GET","/boardupdate", true);
    xmlhttp.onreadystatechange=function(){
          if (xmlhttp.readyState==4 && xmlhttp.status==200){
            string=xmlhttp.responseText;
