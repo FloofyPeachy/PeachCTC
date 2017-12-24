@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html>
 
 <head>
@@ -117,21 +117,15 @@
   //your code here
 
 
-     $.ajax({
-            type: "POST",
-            url: "https://ctcboard-peachmaster.c9users.io",
-            timeout: 2000,
-            data: { image: "/static/images/apples.jpeg", text: "apples" },
-            success: function(data) {
-                //show content
-                alert('Success!')
-            },
-            error: function(jqXHR, textStatus, err) {
-                //show error message
-                alert('text status '+textStatus+', err '+err)
-            }
-        });
-
+      xmlhttp = new XMLHttpRequest();
+   xmlhttp.open("GET","http://localhost:8001/boardupdate", true);
+   xmlhttp.onreadystatechange=function(){
+         if (xmlhttp.readyState==4 && xmlhttp.status==200){
+           string=xmlhttp.responseText;
+         }
+   }
+   xmlhttp.send();
+    
             });       
   </script>
   <span class="gwd-span-2uq8" id="text">CTC Test</span>
